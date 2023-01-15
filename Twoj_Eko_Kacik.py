@@ -47,7 +47,7 @@ def barplot(i, pred):
         fig = px.bar(pd.DataFrame({"names": ['Pompa cyrkulacyjna', 'Zmywarka', 'Zamrażarka', 'Lodówka', 'Pralka'], "values": data.values}), x='values', y='names', title="Zużycie energi w [kWh]", labels={'values':'Energia w kWh', 'names': "Urządzenie"})
         return fig
     else:
-        data = d_prep[cols_pred].iloc[i]
+        data = d_prep[cols].iloc[i]
         fig = px.bar(pd.DataFrame({"names": ['Pompa cyrkulacyjna', 'Zmywarka', 'Zamrażarka', 'Lodówka', 'Pralka'], "values": data.values}), x='values', y='names', title="Zużycie energi w [kWh]", labels={'values':'Energia w kWh', 'names': "Urządzenie"})
         return fig
 
